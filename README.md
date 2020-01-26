@@ -38,11 +38,11 @@
 
 - Python
 
-
+​            
 
 ## 04_Algorithm
 
 ​            
 
-
+- List
 
