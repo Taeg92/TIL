@@ -165,3 +165,31 @@
 
 
 
+### 7. a 태그
+
+> 다른 링크로 가는 태그(하이퍼링크)
+
+```html
+<a href = "가고 싶은 주소"> 내용 </a>
+
+/* 새 페이지에서 링크를 열고 싶을 때 */
+<a href = "https://www.google.com/" target = "_black">
+```
+
+
+
+
+
+### 8. Img 태그
+
+> 이미지를 추가하는 태그
+
+
+
+```html
+/* 가로나 세로 길이 둘중 하나를 설정 안하면 설정한 값에 맞춰서 자동으로 나머지가 설정됨 */
+
+<img src = "https://assets3.thrillist.com/v1/image/1656352/size/tmg-slideshow_l.jpg"
+height = "300" weight = '300'>        
+```
+
