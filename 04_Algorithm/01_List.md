@@ -11,7 +11,7 @@
 
 
 
-![image-20200130233744252](C:\Users\gdr0t\TIL\assets\image-20200130233744252.png)
+![image-20200130233744252](../assets/image-20200130233744252.png)
 
 
 
@@ -255,7 +255,7 @@ for i1 in rage(1,3) :
 >방의 가로길이는 항상 100이며, 세로 길이도 항상 100 이다.
 >즉, 상자는 최소 0, 최대 100 높이로 쌓을 수 있다.
 
-![image-20200130234006551](C:\Users\gdr0t\TIL\assets\image-20200130234006551.png)
+![image-20200130234006551](../assets/image-20200130234006551.png)
 
 
 
@@ -316,7 +316,7 @@ if __name__ == "__main__":
 
 > Baby-gin 게임
 
-![image-20200130234328503](C:\Users\gdr0t\TIL\assets\image-20200130234328503.png)
+![image-20200130234328503](../assets/image-20200130234328503.png)
 
 ```python
 # 완전 검색이 아닌 탐욕 알고리즘으로 Baby-gin 방법으로 풀어보기.
@@ -380,7 +380,7 @@ else : print("Lose")
 >
 > 정렬에서 **key**란? 자료를 정렬하는 기준이 되는 특정 값
 
-![image-20200130234410795](C:\Users\gdr0t\TIL\assets\image-20200130234410795.png)
+![image-20200130234410795](../assets/image-20200130234410795.png)
 
 
 
@@ -418,25 +418,25 @@ else : print("Lose")
 
 **첫 번째 패스*
 
-![image-20200130234505903](C:\Users\gdr0t\TIL\assets\image-20200130234505903.png)
+![image-20200130234505903](../assets/image-20200130234505903.png)
 
 ##### 두 번째 패스
 
 
 
-![image-20200130234532207](C:\Users\gdr0t\TIL\assets\image-20200130234532207.png)
+![image-20200130234532207](../assets/image-20200130234532207.png)
 
 ##### 세 번째 패스
 
-![image-20200130234606120](C:\Users\gdr0t\TIL\assets\image-20200130234606120.png)
+![image-20200130234606120](../assets/image-20200130234606120.png)
 
 ##### 네 번째 패스
 
-![image-20200130234628316](C:\Users\gdr0t\TIL\assets\image-20200130234628316.png)
+![image-20200130234628316](../assets/image-20200130234628316.png)
 
 #####  정렬 끝
 
-![image-20200130234638275](C:\Users\gdr0t\TIL\assets\image-20200130234638275.png)
+![image-20200130234638275](../assets/image-20200130234638275.png)
 
 ```python
 # 리스트를 활용한 버블 정렬(슈도코드로 표현)
@@ -474,11 +474,11 @@ def bubble_sort(li):
 
    DATA = [0, 4, 1, 3, 1, 2, 4, 1]
 
-   ![image-20200130235144655](C:\Users\gdr0t\TIL\assets\image-20200130235144655.png)
+   ![image-20200130235144655](../assets/image-20200130235144655.png)
    
 2. 정렬된 집합에서 각 항목의 앞에 위치할 항목의 개수를 반영하기 위해 COUNTs의 원소를 조정
 
-   ![image-20200130235215489](C:\Users\gdr0t\TIL\assets\image-20200130235215489.png)
+   ![image-20200130235215489](../assets/image-20200130235215489.png)
    
    해당 원소가 정렬될 때 List에 몇번째 index에 들어가는 지를 보여줌.
 
@@ -486,35 +486,35 @@ def bubble_sort(li):
 
    해당 하는 값을 -1 하고 감소시킨 값의 index에 마지막 항목 원소를 넣음.
 
-   ![image-20200130235229118](C:\Users\gdr0t\TIL\assets\image-20200130235229118.png)
+   ![image-20200130235229118](../assets/image-20200130235229118.png)
 
 4. COUNTS[4]를 감소시키고 DATA_Temp에 4를 삽입
 
-   ![image-20200130235245834](C:\Users\gdr0t\TIL\assets\image-20200130235245834.png)
+   ![image-20200130235245834](../assets/image-20200130235245834.png)
 
 5. COUNTS[2]를 감소시키고 DATA_Temp에 2를 삽입
 
-   ![image-20200130235300822](C:\Users\gdr0t\TIL\assets\image-20200130235300822.png)
+   ![image-20200130235300822](../assets/image-20200130235300822.png)
 
 6. COUNTS[1]을 감소시키고 DATA_Temp에 1을 삽입
 
-   ![image-20200130235317298](C:\Users\gdr0t\TIL\assets\image-20200130235317298.png)
+   ![image-20200130235317298](../assets/image-20200130235317298.png)
 
 7. COUNTS[3]을 감소시키고 DATA_Temp에 3을 삽입
 
-   ![image-20200130235332289](C:\Users\gdr0t\TIL\assets\image-20200130235332289.png)
+   ![image-20200130235332289](../assets/image-20200130235332289.png)
 
 8. COUNTS[1]을 감소시키고 DATA_Temp에 1을 삽입
 
-   ![image-20200130235347008](C:\Users\gdr0t\TIL\assets\image-20200130235347008.png)
+   ![image-20200130235347008](../assets/image-20200130235347008.png)
 
 9. COUNTS[4]를 감소시키고 DATA_Temp에 4를 삽입
 
-   ![image-20200130235404026](C:\Users\gdr0t\TIL\assets\image-20200130235404026.png)
+   ![image-20200130235404026](../assets/image-20200130235404026.png)
 
 10. COUNTS[0]를 감소시키고 DATA_Temp에 0을 삽입
 
-    ![image-20200130235619119](C:\Users\gdr0t\TIL\assets\image-20200130235619119.png)
+    ![image-20200130235619119](../assets/image-20200130235619119.png)
 
 #####  DATA_Temp 업데이트 완료하고 정렬 작업을 종료
 
@@ -557,5 +557,5 @@ print(result)
 
 ##### 버블 정렬과 카운팅 정렬 비교
 
-![image-20200130235504096](C:\Users\gdr0t\TIL\assets\image-20200130235504096.png)
+![image-20200130235504096](../assets/image-20200130235504096.png)
 
