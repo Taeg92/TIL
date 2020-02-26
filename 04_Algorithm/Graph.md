@@ -40,7 +40,7 @@ Graph Crash Course
   - 무방향 그래프에서 **하나의 정점에 인접한 정점의 개수**
   - A의 차수는 2(B, C)
 
-![image-20200214134755129](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214134755129.png)
+![image-20200214134755129](../assets/image-20200215195003167.png)
 
 #### 2. 방향 그래프(Directed Graph)
 
@@ -55,7 +55,7 @@ Graph Crash Course
   - 방향 그래프에서 **외부로 향하는 간선**의 수
   - D의 진출차수는 0, C의 진출차수는 1(C→D)
 
-![image-20200214134826995](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214134826995.png)
+![image-20200214134826995](../assets/image-20200215195029689.png)
 
 ####  3. 가중치 그래프(Weighted Graph) 또는 네트워크(Network)
 
@@ -67,26 +67,26 @@ Graph Crash Course
     - 서울 → 구미 → 광주 : 9
     - 서울 → 대전 → 광주 : 3 (⇒ 최소비용)
 
-![image-20200214134848573](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214134848573.png)
+![image-20200214134848573](../assets/image-20200215195044889.png)
 
 #### 4. 연결 그래프(Connected Graph)와 비연결 그래프(Disconnected Graph)
 
 - **연결 그래프**
   - 무방향 그래프에 있는 **모든 노드의 경로가 존재**하는 경우
 
-![image-20200214135759795](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214135759795.png)
+![image-20200214135759795](../assets/image-20200215195128294.png)
 
 - **비연결 그래프**
   - 무방향 그래프에서 **특정 노드의 경로가 존재하지 않**는 경우
 
-![image-20200214135823818](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214135823818.png)
+![image-20200214135823818](../assets/image-20200215195145389.png)
 
 
 ### 3.5 완전 그래프
 
 그래프의 **모든 노드가 서로 연결**되어 있는 그래프
 
-![image-20200214135844921](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214135844921.png)
+![image-20200214135844921](../assets/image-20200215195157650.png)
 
 
 
@@ -102,11 +102,11 @@ Graph Crash Course
 
 #### 2. Directed Graph
 
-![image-20200214140042732](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214140042732.png)
+![image-20200214140042732](../assets/image-20200215195227978.png)
 
 
 
-![image-20200214135951722](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214135951722.png)
+![image-20200226151530250](../assets/image-20200226151530250.png)
 
 
 
@@ -114,7 +114,7 @@ Graph Crash Course
 
 #### 1. 2차배열 활용
 
-![image-20200214140450351](C:\Users\multicampus\Desktop\학습내용\2020.02.14\지각자의최후\image-20200214140450351.png)
+![image-20200214140450351](../assets/image-20200215195246926.png)
 
 #### 2. dictionary 활용
 
