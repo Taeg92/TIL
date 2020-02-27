@@ -196,3 +196,54 @@ height = "300" weight = '300'>
 <img src = "images/icecream.jpg">
 ```
 
+
+
+### 9. div 태그
+
+> 요소들을 묶어줄 수 있는 태그
+
+
+
+```html
+<div class = "page">
+            <a href = "folder1/page1.html" class = "page1">page 1</a>
+            <a href = "folder1/folder2/page2.html" class = "page2">page 2</a>
+            <a href = "folder1/folder2/page3.html" class = "page3">page 3</a>
+        </div>
+```
+
+```css
+.page {
+            background-color: #eee;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            padding: 50px;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+```
+
+
+
+# HTML 코멘트
+
+> `<!-- 내용 -->`의 형태로 되어 있는 부분이 HTML의 '코멘트(comment)'입니다.
+
+
+
+```html
+<!-- 첫 번째 영화: 굿 윌 헌팅 (Good Will Hunting) -->
+<div class="movie">
+  <h2>Good Will Hunting (굿 윌 헌팅)</h2>
+  <p>수학, 법학, 역사학 등 모든 분야에 재능이 있는 ‘윌’(맷 데이먼)은 천재적인 두뇌를 가지고 있지만 어린 시절 받은 상처로 인해 세상에 마음을 열지 못하는 불우한 반항아.</p>
+</div>
+
+<!-- 두 번째 영화: 뷰티풀 마인드 (A Beautiful Mind) -->
+<div class="movie">
+  <h2>뷰티풀 마인드 (A Beautiful Mind)</h2>
+  <p>40년대 최고의 엘리트들이 모이는 프린스턴 대학원. 시험도 보지 않고 장학생으로 입학한 웨스트버지니아 출신의 한 천재가 캠퍼스를 술렁이게 만든다. 너무도 내성적이라 무뚝뚝해 보이고, 오만이라 할 정도로 자기 확신에 차 있는 수학과 새내기 존 내쉬. 누구도 따라올 수 없는 뛰어난 두뇌와 수려한 용모를 지녔지만 괴짜 천재인 그는 기숙사 유리창을 노트 삼아 단 하나의 문제에 매달린다. 바로 자신만의 '오리지날 아이디어'를 찾아내는 것. 어느 날 짖궂은 친구들과 함께 들른 술집에서 금발 미녀를 둘러싸고 벌이는 친구들의 경쟁을 지켜보던 존 내쉬는 섬광같은 직관으로 '균형이론'의 단서를 발견한다. 1949년 27쪽 짜리 논문을 발표한 20살의 청년 존 내쉬는 하루 아침에 학계의 스타로, 제2의 아인슈타인으로 떠오른다.</p>
+</div>
+```
+
