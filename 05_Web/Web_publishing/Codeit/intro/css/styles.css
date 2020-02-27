@@ -1,6 +1,9 @@
 h1 {
     /* 요소에 대한 속성 */
     font-size: 64px;
+    /* 폰트의 굵기 100~ 900 사이의 값 참고: 값700 = b 태그*/
+    /* 폰트의 굵기는 100단위로 100, 200, ...,  900 으로만 설정 가능 */
+    font-weight: 700;
 }
     /* h3 위에 100px의 여백을 줌 */
 h3 {
@@ -9,6 +12,16 @@ h3 {
         /* i tag의 글씨를 48px로 키워줌 */
         /* 모든 i tag의 글씨가 다 커짐 */
         /* 특정 태그 속 i tag의 글씨를 키우고 싶으면 i 앞에 태그를 써준다. */
+
+h2 {
+    color: rgb(97, 249, 107);
+    /* color: #61F96B;  위와 같은 코드 각각의 RGB 값을 16진수로 표현*/
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+}
+
 p i {
     font-size: 48px;
 }
@@ -47,4 +60,14 @@ p i {
     margin-right: auto;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.div1 {
+    font-size: 24px;
+}
+.div2 {
+    font-size: 200%;
+}
+.div3 {
+    font-size: 200%;
 }
