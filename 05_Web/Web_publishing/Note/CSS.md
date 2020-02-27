@@ -158,3 +158,234 @@ h3 {
 
 
 
+### 5. HTML 요소에 이름 붙이기
+
+> - 클래스(Class)
+> - 아이디(id)
+
+
+
+#### 클래스(Class)
+
+```Html
+<p class="big-blue-text">First</p>
+<p>Second</p>
+<p class="big-blue-text">Third</p>
+```
+
+![image-20200227214155822](./assets/image-20200227214155822.png)
+
+위의 코드에서 첫 번째 `p` 요소와 세 번째 `p` 요소는 `"big-blue-text"`라는 클래스 이름을 갖고 있습니다. 그러면 css에서 `.big-blue-text`에 스타일을 입혀주면 됩니다. 클래스 이름이라는 걸 나타내는 '`.`(마침표)'를 잊지 맙시다!
+
+
+
+#### 아이디(id)
+
+```html
+<p id="favorite-text">First</p>
+<p>Second</p>
+<p>Third</p>
+```
+
+![image-20200227214253244](./assets/image-20200227214253244.png)
+
+위의 코드에서 첫 번째 `p` 요소는 `"favorite-text"`라는 아이디를 갖고 있습니다. 그러면 css에서 `#favorite-text`에 스타일을 입혀주면 됩니다. 클래스 이름을 나타내기 위해 '`.`(마침표)'를 붙인 것처럼 아이디를 나타내기 위해서는 '`#`(샾 표시)'를 써줘야 합니다.
+
+
+
+# 클래스 vs 아이디
+
+클래스와 아이디. 얼핏 보기에는 똑같아 보이는데요. 핵심적인 차이점 몇 가지가 있습니다:
+
+1. 같은 클래스 이름을 여러 요소가 가질 수 있지만, 같은 아이디를 여러 요소가 공유할 수는 없습니다.
+2. 한 요소가 여러 클래스를 가질 수 있지만, 한 요소는 하나의 아이디만 가질 수 있습니다. (단, 한 요소가 클래스도 여러 개 갖고 아이디도 하나 가질 수 있습니다!)
+
+
+
+## CSS 파일 따로 쓰기
+
+> 동일한 내용으로 html을 style한 코드를 같이 쓰는 것은 피하자!
+>
+> 같은 내용의 style을 묶어서 html이 있는 폴더안에 폴더를 만들고 그안에 css 파일을 만든다.
+
+
+
+```css
+h1 {
+    /* 요소에 대한 속성 */
+    font-size: 64px;
+}
+    /* h3 위에 100px의 여백을 줌 */
+h3 {
+    margin-top: 100px;
+}
+        /* i tag의 글씨를 48px로 키워줌 */
+        /* 모든 i tag의 글씨가 다 커짐 */
+        /* 특정 태그 속 i tag의 글씨를 키우고 싶으면 i 앞에 태그를 써준다. */
+p i {
+    font-size: 48px;
+}
+.big-blue-text {
+    font-size: 64px;
+    color: blue;
+}
+.centered-text {
+    text-align: center;
+}
+#best-text {
+    color: orange;
+}
+.page {
+    background-color: #eee;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.page .page1 {
+    color: blue;
+}
+.page .page2 {
+    color: red;
+}
+.page .page3 {
+    color: orange;
+}
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+```
+
+```html
+<head> 
+        <title>My First Website</title>
+        <meta charset = "utf-8">
+    	/* style 코드가 들어있는 css파일의 경로를 링크해주면 된다. */
+        <link href = "css/styles.css" rel = "stylesheet">
+    </head>
+```
+
+
+
+# 스타일을 적용하는 방법
+
+>HTML 코드에 스타일을 입히는 방법에는 세 가지가 있습니다.
+
+
+
+- ### `<style>` 태그
+
+  ```html
+  <style>
+    h1 {
+      color: green;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  </style>
+  
+  <h1>Hello World!</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet lorem sit amet nunc ornare convallis. Pellentesque ac posuere lectus. In eu ipsum et quam finibus fermentum vitae sit amet magna.</p>
+  ```
+
+  
+
+- ### style 속성
+
+  ```html
+  <h1 style="color: green; text-align: center;">Hello World!</h1>
+  <p style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet lorem sit amet nunc ornare convallis. Pellentesque ac posuere lectus. In eu ipsum et quam finibus fermentum vitae sit amet magna.</p>
+  ```
+
+  ​    
+
+- ### 3. 외부 CSS 파일 + <link> 태그
+
+  #### CSS 파일
+
+  ```css
+  h1 {
+    color: green;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  ```
+
+  #### html 파일
+
+  ```html
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <h1>Hello World!</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet lorem sit amet nunc ornare convallis. Pellentesque ac posuere lectus. In eu ipsum et quam finibus fermentum vitae sit amet magna.</p>
+  ```
+
+
+
+# 어떤 방법을 써야 할까?
+
+일반적으로는 외부 CSS 파일에 스타일을 쓰고 HTML 코드에서 `<link>` 태그로 연결해주는 것이 가장 좋은 방식입니다. 하지만 조금씩 새로운 스타일을 시도해볼 때에는 간편함을 위해서 `<style>`태그를 쓰는 방법 또는 `style` 속성에서 테스트를 하고, 나중에 외부 CSS 파일로 옮기는 방법도 있습니다!
+
+  
+
+#### 외부 CSS 파일을 작성하고 link 태그로 연결하는 것
+
+**추천이유?**
+
+- 정리 정돈
+  - html 파일에는 html 파일만 있고 css 파일에는 딱 css 코드만 있다.
+- 외부 파일 이용시
+  - 링크 태그만으로 깔끔하게 정리 가능
+
+
+
+# CSS 코멘트
+
+> `/* 내용 */`의 형태로 되어 있는 부분이 CSS의 '코멘트(comment)'입니다.
+
+
+
+```css
+/* 영화 제목 */
+.movie h2 {
+  color: #4d9fff;
+  text-align: center;
+  font-size: 48px;
+}
+
+/* 영화 줄거리 */
+.movie p {
+  font-size: 24px;
+}
+```
+
+
+
+# 정리
+
+코멘트는 사실 브라우저가 무시하기 때문에 실제 결과물인 사이트에 반영이 되지 않습니다. 하지만 복잡한 부분들을 설명함으로써 지저분해 보일 수 있는 코드를 정리해주는 중요한 역할을 합니다.
+
+몇 년 뒤에 자신이 쓴 코드를 확인했을 때, 또는 동료 개발자에게 코드를 보여줬을 때 코멘트로 설명이 잘 되어 있어야 이해하기 쉽겠죠?
+
+
+
+## 도움이 되는 사이트
+
+> 구글에 text decoration  검색
+>
+> - W3Schools : CSS 스타일 정보
+> - stackoverflow.com : 세계에서 가장 큰 프로그래밍 포럼
+> - jsfiddle.net : 간단하게 코드를 작성할 수 있는 사이트, 저장을 하면 내용이 링크로 저장되기 때문에 질문코드 질문할때 유용
