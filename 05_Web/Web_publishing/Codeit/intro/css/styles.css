@@ -1,3 +1,8 @@
+@font-face{
+    src: url("../fonts/BMJUA_ttf.ttf");
+    font-family: "BmJua";
+}
+
 h1 {
     /* 요소에 대한 속성 */
     font-size: 64px;
@@ -64,10 +69,13 @@ p i {
 
 .div1 {
     font-size: 24px;
+    font-family: "Times New Roman", "Times";
 }
 .div2 {
     font-size: 200%;
+    font-family: "Roboto", sans-serif;
 }
 .div3 {
     font-size: 200%;
+    font-family: "BmJua", cursive;
 }
