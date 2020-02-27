@@ -4,41 +4,30 @@
     <head> 
         <title>My First Website</title>
         <meta charset = "utf-8">
-        <style>
-            /* 스타일링 하고 싶은 요소 h1 */
-        h1 {
-            /* 요소에 대한 속성 */
-            font-size: 64px;
-            text-align: center;
-        }
-            /* h3 위에 100px의 여백을 줌 */
-        h3 {
-            margin-top: 100px;
-        }
-             /* i tag의 글씨를 48px로 키워줌 */
-             /* 모든 i tag의 글씨가 다 커짐 */
-             /* 특정 태그 속 i tag의 글씨를 키우고 싶으면 i 앞에 태그를 써준다. */
-        p i {
-            font-size: 48px;
-        }
-        </style>
+        <link href = "css/styles.css" rel = "stylesheet">
     </head>
     
     <body>
-        <h1>My First Page</h1>
+        <h1 class = "centered-text big-blue-text">My First Page</h1>
         <h2>I <i>Love</i> HTML!</h2>
-        <h3>안녕 세상!</h3>
+        <h3 style="color: red; font-size: 72px;">안녕 세상!</h3>
         
         <img src = "https://assets3.thrillist.com/v1/image/1656352/size/tmg-slideshow_l.jpg"
-        height = "300">
+        height = "300" class = "image">
         
         <p>Lorem ipsum <b>dolor</b> sit amet, consectetur adipiscing 
             elit, sed do eiusmod <i>tempor</i> incididunt ut labore 
             et dolore <strong>magna</strong> <em>aliqua</em>.</p>
+        <p class = "big-blue-text">파란 글씨 문단</p>
+        <p id = "best-text">Best Text</p>
+        
         <a href = "https://www.google.com/" target = "_black"> 구글로 가는 링크 </a>
-        <a href = "folder1/page1.html">page 1</a>
-        <a href = "folder1/folder2/page2.html">page 2</a>
-        <a href = "folder1/folder2/page3.html">page 3</a>
+        <div class = "page">
+            <a href = "folder1/page1.html" class = "page1">page 1</a>
+            <a href = "folder1/folder2/page2.html" class = "page2">page 2</a>
+            <a href = "folder1/folder2/page3.html" class = "page3">page 3</a>
+        </div>
+        
     </body>
     
 </html>
