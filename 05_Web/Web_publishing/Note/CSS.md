@@ -708,3 +708,103 @@ p {
 ![image-20200227234822941](./assets/image-20200227234822941.png)
 
 ![image-20200227234835070](./assets/image-20200227234835070.png)
+
+
+
+# 폰트 설정
+
+> 다양한 폰트를 설정할 수 있다.
+
+
+
+- Serif : Times New Roman, 궁서체 끝처리가 약간 휘어져 있는것이 특징
+- Sans-Serif : Arial, 굴림체 깔끔한 디자인에 좋은 폰트
+- Monospace: Courier, Courier New 모든 글자가 같은 너비를 차지한다. 프로그래밍용으로 좋다.
+- Cursive : Comic Sans MS, Monotype Corsiva  필기체
+- Fantasy : Impact, Haettenschweiler 특이한 나머지 폰트를 포함
+
+
+
+### 1. 폰트 설정 방법
+
+```css
+.div1 {
+    font-size: 24px;
+    font-family: "Times New Roman";
+}
+```
+
+
+
+### 주의! 폰트가 컴퓨터에 없을 수도 있다.
+
+> 이를 대비해서 제2의 폰트를 설정해 줄 수 있다.
+
+```css
+.div1 {
+    font-size: 24px;
+    /* 브라우저는 Times New Roman을 먼저 찾고 없으면 Times를 찾는다. */
+    /* 제1의 폰트, 제2의 폰트를 설정해주고 둘다 없을 경우를 대비해 마지막 폰트 종류를 써준다.*/
+   	/* 폰트 둘다 없으면 serif 폰트 중 하나를 사용한다. */
+    font-family: "Times New Roman", "Times", serif;
+}
+```
+
+
+
+### 2. 설치되지 않은 폰트 사용법
+
+
+
+#### 1) 웹 폰트 사용하기
+
+> Google font: https://fonts.google.com
+
+#### HTML
+
+```html
+<link href = "<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto&display=swap" rel="stylesheet">"
+```
+
+#### CSS
+
+```css
+.div2 {
+    font-size: 200%;
+    font-family: 'Roboto', sans-serif;
+}
+.div3 {
+    font-size: 200%;
+    font-family: 'Nanum Gothic', cursive;
+}
+```
+
+
+
+### 만약 한글 폰트 사용하고 싶다면?
+
+Google font: https://fonts.google.com/earlyaccess에서 korean 검색해서 사용!
+
+
+
+#### 2) 폰트 파일 사용하기
+
+다운로드한 폰트 파일을 폴더안에 넣고 경로를 써준다.
+
+```css
+@font-face{
+    src: url("../fonts/BMJUA_ttf.ttf");
+    /* 사용할 폰트 이름을 써준다. */
+    font-family: "BmJua";
+}
+```
+
+```css
+.div3 {
+    font-size: 200%;
+    font-family: "BmJua", cursive;
+}
+```
+
+
+
