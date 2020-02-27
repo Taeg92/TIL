@@ -397,3 +397,314 @@ ____
 > - W3Schools : CSS 스타일 정보
 > - stackoverflow.com : 세계에서 가장 큰 프로그래밍 포럼
 > - jsfiddle.net : 간단하게 코드를 작성할 수 있는 사이트, 저장을 하면 내용이 링크로 저장되기 때문에 질문코드 질문할때 유용
+
+
+
+
+
+## 텍스트 색
+
+> 텍스트의 색을 지정해주기 위해서는 `color` 속성을 사용, CSS에서 색을 표현하는 방식이 세 가지가 있다.
+>
+> - 색 이름
+> - RGB 값
+> - HEX 값(16 진법) 
+>
+> 위 RGB값과 HEX 값은 www.htmlcolorcodes.com 참고
+
+
+
+# 색 이름
+
+[CSS에서 정해준 색 이름](https://www.w3schools.com/cssref/css_colors.asp) 중 하나를 쓰는 방법이 있습니다. 모든 색이 있지는 않지만, 무려 140개의 색이 대부분 브라우저에서 지원된다고 하네요!
+
+```css
+h1 {
+  color: blue;
+}
+```
+
+
+
+# RGB 값
+
+모든 색은 빨강(Red), 초록(Green), 파랑(Blue)의 조화로 표현할 수 있습니다. 이 표현 방식이 바로 'RGB'입니다. [이런 사이트](https://htmlcolorcodes.com/color-picker/)에서 원하는 색을 찾아보세요.
+
+```css
+h1 {
+  color: rgb(83, 237, 65);
+}
+```
+
+
+
+# HEX 값 (16진법)
+
+HEX 값은 단순히 RGB 값을 16진법으로 표현한 방식입니다. `83`는 16진법으로 `53`이고, `237`는 16진법으로 `ED`이고, `65`는 16진법으로 `41`입니다. 따라서 `rgb(83, 237, 65)`는 `#53ED41`과 같은 거죠.
+
+
+
+```css
+h1 {
+  color: #53ED41;
+}
+```
+
+
+
+# 폰트 굵기 설정
+
+> 폰트 굵기를 설정하기 위해서는 `font-weight` 속성을 사용하면 됩니다.
+
+
+
+## 사용법
+
+사용 가능한 값은 얇은 순서로 `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`입니다. `100`이 가장 얇고, `900`이 가장 굵다는 뜻이죠.
+
+
+
+```css
+/*참고로 font-weight: normal;은 font-weight: 400과 똑같고, 
+font-weight: bold;는 font-weight: 700과 똑같습니다!*/
+
+#p1 {
+  font-weight: 400;
+}
+
+#p2 {
+  font-weight: 700;
+}
+
+#p3 {
+  font-weight: normal;
+}
+
+#p4 {
+  font-weight: bold;
+}
+```
+
+
+
+# 주의 사항
+
+`150`, `230`과 같은 값은 사용할 수 없습니다. 만약 사용한다면 그냥 기본값으로 설정됩니다.
+
+또 주의할 점이 있습니다. 폰트나 브라우저에 따라서 지원하는 폰트 굵기 값이 다릅니다. 어떤 폰트는 `100`, `400`, `700`만 지원될 수도 있다는 뜻이죠. 잘 확인하고 사용하시길 바랍니다!
+
+
+
+# 텍스트 정렬
+
+> `text-align` 속성을 사용하면 텍스트를 왼쪽, 오른쪽, 또는 가운데로 정렬할 수 있습니다.
+
+
+
+```css
+#p1 {
+  color: red;
+  text-align: left;
+}
+
+#p2 {
+  color: green;
+  text-align: right;
+}
+
+#p3 {
+  color: blue;
+  text-align: center;
+}
+
+```
+
+
+
+# 태그 정렬
+
+> `<p>` 태그나 헤더 태그들 뿐만 아니라 `<div>` 태그의 내용물도 정렬을 할 수 있습니다!
+
+```html
+<div class="navigation">
+  <a href="#">Menu 1</a> <a href="#">Menu 2</a> <a href="#">Menu 3</a>
+</div>
+```
+
+```css
+.navigation {
+  text-align: center;
+}
+```
+
+
+
+# 텍스트 꾸미기
+
+> `text-decoration`을 사용하면 텍스트를 몇 가지 방법으로 꾸밀 수 있습니다. 사실 옵션도 몇 가지 없고 딱히 예쁘지도 않지만 한 번 살펴봅시다.
+
+
+
+# Underline
+
+`underline` 값을 사용하면 밑줄이 그어집니다.
+
+```css
+h1 {
+  text-decoration: underline;
+}
+```
+
+
+
+# Overline
+
+`overline` 값을 사용하면 글 위에 줄이 그어집니다.
+
+```css
+h1 {
+  text-decoration: overline;
+}
+```
+
+
+
+# Line-through
+
+`line-through` 값을 사용하면 줄이 글을 관통합니다.
+
+```css
+h1 {
+  text-decoration: line-through;
+}
+```
+
+
+
+# None
+
+`none` 값을 사용하면 아무 줄도 없습니다. **이게 기본 값입니다!**
+
+```css
+h1 {
+  text-decoration: none;
+}
+```
+
+
+
+### `<a>` 태그와 사용
+
+사실 제가 `text-decoration`을 가장 많이 사용하는 경우는 텍스트를 꾸미기 위해서가 아니라 꾸밈을 없애기 위해서입니다. `` 태그는 기본적으로 밑줄이 그어져 있는데, 이걸 없애기 위해서 `text-decoration: none;`을 사용합니다.
+
+#### HTML
+
+```html
+<a href="https://www.codeit.kr">구글로 가는 링크</a>
+<a class="no-decoration" href="https://www.google.com" target="_blank">구글로 가는 링크</a>
+```
+
+#### CSS
+
+```css
+.no-decoration {
+  text-decoration: none;
+}
+```
+
+
+
+### 참고 a 태그 정렬하는 법
+
+> a태그는 태그 텍스트 자체가 차지하는 공간이 텍스트 크기만큼이라 정렬이 안된다.
+>
+> `<div>`태그안에 a태그 내용을 넣고 정렬하면 된다.
+
+
+
+```html
+<div class = "site">
+    <a href = "https://www.naver.com" target = "_blank">구글로 가는 링크</a>
+</div>
+```
+
+```css
+.site {
+    text-align: center;
+}
+```
+
+
+
+# 텍스트의 크기 설정 방법
+
+> - Absolute(절대적 방법) : px, pt
+> - Relative(상대적 방법) : em(100% = 1em), %
+
+
+
+절대적 방법은 정해준 부모 요소와 무관하게 정해준 px, pt의 크기만큼 보여진다.
+
+상대작 방법은 200%라고 설정해 주게 되면 부모 요소의 크기의 2배의 크기로 보여지게 된다.
+
+
+
+# Line-height
+
+> `line-height`를 사용하면 줄간격을 조절할 수 있습니다. 사실 `line-height` 속성을 '완벽하게' 이해하려면 타이포그래피 지식이 조금 필요한데요. 우선은 아주 간단하게만 설명드리겠습니다.
+
+
+
+![image-20200227234438468](./assets/image-20200227234438468.png)
+
+
+
+위 사진에 파란 줄 보이시죠? 이 파란 줄 사이가 실제 내용이 들어가 있는 'content area'(콘텐츠 영역)입니다. `font-family`와 `font-size`에 따라서 'content area'가 정해지고, `line-height`는 'content area'에 영향을 주지 않습니다.
+
+`line-height`를 통해서는 각 줄이 실질적으로 차지하는 공간을 정해줄 수 있습니다. 예를 들어서 `99px`로 설정하면 'content area'보다 `40px`이 많기 때문에 위 아래로 `20px`의 공간이 추가로 생깁니다.
+
+반대로 `40px`로 설정하면 'content area'보다 `19px`이 적기 때문에 위 아래로 `-9.5px`의 공간이 줄어듭니다.
+
+#### HTML
+
+```html
+<p class="p1">gallantly</p>
+<p class="p2">gallantly</p>
+<p class="p3">gallantly</p>
+
+<p class="p1">gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly</p>
+<p class="p2">gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly</p>
+<p class="p3">gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly gallantly</p>
+```
+
+#### CSS
+
+```css
+p {
+  font-size: 40px;
+  color: white;
+}
+
+.p1 {
+  background-color: red;
+  line-height: normal;
+}
+
+.p2 {
+  background-color: green;
+  line-height: 80px;
+}
+
+.p3 {
+  background-color: blue;
+  line-height: 30px;
+}
+```
+
+![image-20200227234748072](./assets/image-20200227234748072.png)
+
+![image-20200227234809297](./assets/image-20200227234809297.png)
+
+![image-20200227234822941](./assets/image-20200227234822941.png)
+
+![image-20200227234835070](./assets/image-20200227234835070.png)
