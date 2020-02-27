@@ -1,0 +1,50 @@
+h1 {
+    /* 요소에 대한 속성 */
+    font-size: 64px;
+}
+    /* h3 위에 100px의 여백을 줌 */
+h3 {
+    margin-top: 100px;
+}
+        /* i tag의 글씨를 48px로 키워줌 */
+        /* 모든 i tag의 글씨가 다 커짐 */
+        /* 특정 태그 속 i tag의 글씨를 키우고 싶으면 i 앞에 태그를 써준다. */
+p i {
+    font-size: 48px;
+}
+.big-blue-text {
+    font-size: 64px;
+    color: blue;
+}
+.centered-text {
+    text-align: center;
+}
+#best-text {
+    color: orange;
+}
+.page {
+    background-color: #eee;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.page .page1 {
+    color: blue;
+}
+.page .page2 {
+    color: red;
+}
+.page .page3 {
+    color: orange;
+}
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
