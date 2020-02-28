@@ -808,3 +808,365 @@ Google font: https://fonts.google.com/earlyaccess에서 korean 검색해서 사�
 
 
 
+# Box Model
+
+> 모든 HTML 요소는 직사각형 Box 형태를 띄고 있다.
+
+
+
+![image-20200228221611930](./assets/image-20200228221611930.png)
+
+
+
+# Padding과 Margin의 차이
+
+Padding과 Margin은 쉽게 헷갈릴 수 있는 개념입니다. 차이를 정확히 집고 넘어갑시다!
+
+요소는 내용(content), 패딩(padding), 테두리(border)로 이루어져 있습니다. Padding은 내용과 테두리 사이의 '여유 공간'입니다. 반면에 Margin은 요소 주위의 여백입니다. 즉, 테두리 밖의 공간인 셈이죠.
+
+
+
+# Padding
+
+Padding을 주는 방법에는 몇 가지가 있습니다.
+
+### 가장 직관적인 방법
+
+우선 가장 직관적인 방법입니다:
+
+```css
+p {
+  border: 1px solid blue;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 120px;
+  padding-right: 60px;
+}
+```
+
+
+
+### 한 줄에
+
+한 줄에 쓰고 싶으면 `padding` 속성을 쓰면 되는데요. 순서는 위(`padding-top`)부터 시계 방향으로 하나씩 쓰면 됩니다.
+
+```css
+p {
+  padding: 위 오른쪽 아래 왼쪽;
+}
+```
+
+그러니까 위의 코드와 똑같이 쓰기 위해서는 이렇게 하면 되는 거죠:
+
+```css
+p {
+  border: 1px solid blue;
+  padding: 20px 60px 40px 120px;
+}
+
+```
+
+### 위, 아래, 왼쪽, 오른쪽이 다 같은 경우
+
+만약 위, 아래, 왼쪽, 오른쪽에 똑같은 padding을 주고 싶으면 더 간편합니다. 모두 `50px`의 padding을 주려면 이렇게 하면 됩니다:
+
+```css
+p {
+  border: 1px solid blue;
+  padding: 50px;
+}
+```
+
+### 위, 아래가 같고, 왼쪽, 오른쪽이 같은 경우
+
+위, 아래에 `50px`의 padding을 주고, 왼쪽, 오른쪽에 `100px`의 padding을 주려면 이렇게 하면 됩니다:
+
+```css
+p {
+  border: 1px solid blue;
+  padding: 50px 100px;
+}
+```
+
+# Margin
+
+요소에게 margin을 주는 방법은 padding을 주는 방법과 똑같습니다.
+
+### 가장 직관적인 방법
+
+```css
+p {
+  border: 1px solid blue;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 200px;
+  margin-right: 60px;
+}
+```
+
+### 한 줄에
+
+```css
+p {
+  margin: 위 오른쪽 아래 왼쪽;
+}
+```
+
+그러니까 위의 코드와 똑같이 쓰기 위해서는 이렇게 하면 되는 거죠:
+
+```css
+p {
+  margin: 50px 60px 40px 200px;
+}
+```
+
+### 위, 아래, 왼쪽, 오른쪽이 다 같은 경우
+
+```css
+p {
+  margin: 50px;
+}
+```
+
+### 위, 아래가 같고, 왼쪽, 오른쪽이 같은 경우
+
+```css
+p {
+  margin: 50px 70px;
+}
+```
+
+### 가운데 정렬
+
+요소를 가운데 정렬하고 싶으면 왼쪽과 오른쪽 `margin` 값을 `auto`로 설정해줘야 합니다. `auto`는 말 그대로 '자동으로 계산'하라는 뜻인데요. 왼쪽과 오른쪽을 `auto`로 설정하면 자동으로 왼쪽과 오른쪽을 똑같이 함으로써 요소는 가운데 정렬이 됩니다.
+
+```css
+p {
+  border: 1px solid blue;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+
+
+# 가로 길이, 세로 길이
+
+### 텍스트
+
+요소의 가로 길이(width)와 세로 길이(height)를 설정해봅시다.
+
+```css
+p {
+  border: 1px solid blue;
+  width: 400px;
+  height: 300px;
+}
+```
+
+### 이미지
+
+사진의 크기도 똑같이 css에서 설정할 수 있습니다.
+
+```css
+.bond-img {
+  width: 400px;
+  height: 300px;
+}
+
+```
+
+# 최소, 최대 가로 길이
+
+`min-width`, `max-width`로 요소의 최소, 최대 가로 길이를 설정할 수 있습니다.
+
+```css
+.p1 {
+  border: 1px solid blue;
+  max-width: 1000px;
+}
+
+.p2 {
+  border: 1px solid red;
+  max-width: 200px;
+}
+
+.p3 {
+  border: 1px solid blue;
+  min-width: 2000px;
+}
+
+.p4 {
+  border: 1px solid red;
+  min-width: 200px;
+}
+
+```
+
+# 최소, 최대 세로 길이
+
+`min-height`, `max-height`로 요소의 최소, 최대 세로 길이를 설정할 수 있습니다.
+
+```css
+.p1 {
+  border: 1px solid blue;
+  min-height: 400px;
+}
+
+.p2 {
+  border: 1px solid red;
+  min-height: 200px;
+}
+
+.p3 {
+  border: 1px solid blue;
+  max-height: 1000px;
+}
+
+.p4 {
+  border: 1px solid red;
+  max-height: 50px;
+}
+```
+
+
+
+# Overflow
+
+> `width`, `height`, `max-width`, `max-height` 등을 설정하다 보면 내용물이 들어갈 공간이 부족한 경우가 있습니다.
+
+```css
+p {
+  border: 1px solid blue;
+  width: 300px;
+  height: 200px;
+}
+```
+
+이렇게 넘쳐나는 내용물을 `overflow` 속성으로 처리해줄 수 있는데요. 몇 가지 옵션이 있습니다.
+
+# 옵션 1: visible
+
+`visible` 값을 사용하면 넘쳐나는 내용물이 그대로 보입니다. 따로 설정해주지 않으면 이게 기본값입니다!
+
+```css
+p {
+  border: 1px solid blue;
+  width: 300px;
+  height: 200px;
+  overflow: visible;
+}
+
+```
+
+
+
+# 옵션 2: hidden
+
+`hidden` 값을 사용하면 넘쳐나는 부분을 아예 숨겨줄 수도 있습니다.
+
+```css
+p {
+  border: 1px solid blue;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+```
+
+
+
+# 옵션 3: scroll
+
+내용물을 숨겼다가, 사용자가 스크롤을 하면 볼 수 있게 해주는 방법도 있습니다!
+
+```css
+p {
+  border: 1px solid blue;
+  width: 300px;
+  height: 200px;
+  overflow: scroll;
+}
+```
+
+
+
+# 옵션 4: auto
+
+`scroll`과 거의 똑같은데, 한 가지 차이점이 있습니다. `scroll`은 **항상** 스크롤바를 보여주고, `auto`는 **내용물이 넘쳐날 때만** 스크롤바를 보여줍니다.
+
+참고로 Mac OS에서는 스크롤을 할 때만 스크롤바를 보여주는 경향이 있기 때문에 `scroll`과 `auto`의 차이를 보기 힘들 수도 있습니다.
+
+```css
+p {
+  border: 1px solid blue;
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+}
+```
+
+
+
+# Border
+
+> 다른 속성들과 마찬가지로, 테두리를 설정해주는 방법도 다양합니다.
+
+
+
+# 한 줄에 끝내기
+
+가장 일반적인 방법은 `border` 속성으로 한 줄에 다 쓰는 것입니다. 이 방식을 사용하면 위, 아래, 왼쪽, 오른쪽 모두 같은 테두리가 생깁니다. 값을 쓰는 순서는 굵기, 스타일(실선, 점선 등), 색입니다.
+
+```css
+.p1 {
+  border: 2px solid #4d9fff;
+}
+
+.p2 {
+  border: 2px dotted #4d9fff;
+}
+
+.p3 {
+  border: 2px dashed #4d9fff;
+}
+
+```
+
+
+
+# 명확하게 나누기
+
+다른 방법은 `border-style`, `border-color`, `border-width` 속성을 써서 테두리의 스타일을 하나씩 지정해주는 것입니다.
+
+```css
+.p1 {
+  border-style: dotted;
+  border-color: red;
+  border-width: 5px;
+}
+```
+
+
+
+# 다채로운 테두리
+
+지금까지는 4면의 테두리가 모두 같았는데, 다 다르게 설정해주고 싶으면 이렇게 하면 됩니다:
+
+```css
+.p1 {
+  border-top: 3px dotted #4d9fff;
+  border-bottom: 2px dashed red;
+  border-left: 5px solid green;
+}
+```
+
+
+
+# 테두리 없애기
+
+어떤 요소들(예: `<input>` 태그)은 기본적으로 테두리가 설정되어 있습니다. 이런 요소들의 테두리를 없애고 싶으면 직접 `border` 속성을 설정해주면 되는데요. 두 가지 방법이 있습니다:
+
+1. `border: none;`
+2. `border: 0;`
