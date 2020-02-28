@@ -8,7 +8,10 @@ body {
   height: 684px;
     
   /* 여기에 입력하세요. */
-  background-color: gray; /* 이건 지우세요! */
+  background-image: url("../images/hero_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 /* 세로 가운데 정렬을 위해서 */
@@ -54,4 +57,9 @@ body {
 
 .learn-more {
   /* 여기에 입력하세요. */
+  border: 2px solid white;
+  text-decoration: none;
+  padding: 8px 40px;
+  font-size: 18px;
+  color: white;
 }
