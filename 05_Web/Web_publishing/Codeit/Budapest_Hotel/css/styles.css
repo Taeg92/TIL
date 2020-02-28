@@ -8,7 +8,10 @@
 }
 
 .info {
-  /* 이 부분을 채워주세요! */
+  height: 220px;
+  border: 3px solid  #B72920;
+  overflow: scroll;
+  padding: 15px;
 }
 
 img {
