@@ -1170,3 +1170,227 @@ p {
 
 1. `border: none;`
 2. `border: 0;`
+
+
+
+# 둥근 모서리
+
+> `border-radius`라는 속성을 사용하면 요소의 모서리를 둥글게 만들 수 있습니다. 더 큰 값을 쓰면 더 둥글게 되는 거죠!
+
+```css
+.div1 {
+  border: 1px solid green;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.div2 {
+  border: 1px solid green;
+  border-radius: 30px;
+}
+```
+
+# 개별 설정
+
+그냥 `border-radius` 속성을 사용하면 모서리 네 개 모두 똑같이 둥글게 되는데요. 각 모서리를 개별 설정할 수도 있습니다.
+
+```css
+h1 {
+  border: 1px solid green;
+  border-top-left-radius: 50px; /* 왼쪽 위 */
+  border-top-right-radius: 5px; /* 오른쪽 위 */
+  border-bottom-right-radius: 0px; /* 오른쪽 아래 */
+  border-bottom-left-radius: 20px; /* 왼쪽 아래 */
+}
+
+```
+
+
+
+# 배경색
+
+> `background-color` 속성을 사용하면 배경색을 설정할 수 있습니다. 폰트 색을 설정할 때처럼 색 이름, RGB 코드, HEX 코드 중 하나를 입력하면 됩니다.
+
+
+
+```css
+h1 {
+  background-color: #4d9fff;
+}
+```
+
+
+
+### 페이지 배경색
+
+페이지 전체의 배경색을 설정하고 싶으면 `body` 태그에 `background-color` 속성을 입혀주면 됩니다.
+
+그리고 배경색을 투명하게 두고 싶으면 `transparent` 값으로 설정해주면 되는데, 따로 설정을 해주지 않으면 `transparent`가 기본값으로 설정됩니다!
+
+
+
+```css
+body {
+  background-color: #4d9fff;
+}
+
+h1 {
+  background-color: white;
+}
+
+h2 {
+  background-color: transparent
+}
+```
+
+
+
+# 그림자
+
+> 요소에 그림자를 주기 위해서는 `box-shadow` 속성을 사용하면 되는데요. 기본값은 `none`입니다. 그림자가 없다는 뜻이죠.
+
+
+
+```css
+.div1 {
+  background-color: #eeeeee;
+  width: 400px;
+  height: 300px;
+  box-shadow: none;
+}
+```
+
+
+
+# 그림자 추가
+
+### 위치 설정
+
+그림자의 위치만 설정해주면 그림자가 나타납니다. 가로 위치와 세로 위치를 설정해줍시다.
+
+
+
+```css
+.div1 {
+  background-color: #eeeeee;
+  width: 400px;
+  height: 300px;
+  box-shadow: 40px 10px;
+}
+```
+
+### 그림자 색 설정
+
+위의 예시를 보시면 그림자가 검정색이죠? 따로 설정해주지 않으면 그림자는 검정색입니다. 만약 다른 색으로 바꾸고 싶으면 `box-shadow`속성에 추가로 색을 써주면 됩니다.
+
+```css
+.div1 {
+  background-color: #eeeeee;
+  width: 400px;
+  height: 300px;
+  box-shadow: 40px 10px #4d9fff;
+}
+```
+
+### 흐림 정도 (blur)
+
+`box-shadow` 속성에서 그림자가 얼마나 흐리게 나올지 설정해줄 수 있습니다. 가로, 세로 위치 뒤에 추가해주면 되는데요. 기본값은 `0px`입니다.
+
+```css
+.div1 {
+  background-color: #eeeeee;
+  width: 400px;
+  height: 300px;
+  box-shadow: 40px 10px 10px #4d9fff;
+}
+```
+
+### 그림자 크기 (spread)
+
+그림자가 얼마나 퍼질지도 설정할 수 있습니다. 흐림 값 이후에 써주면 됩니다.
+
+```css
+.div1 {
+  background-color: #eeeeee;
+  width: 400px;
+  height: 300px;
+  box-shadow: 40px 10px 10px 20px #4d9fff;
+}
+```
+
+
+
+# Box-sizing
+
+#### HTML
+
+```html
+<div class="div1">Hello World!</div>
+<div class="div2">Hello World!</div>
+```
+
+#### CSS
+
+```css
+<div class="div1">Hello World!</div>
+<div class="div2">Hello World!</div>
+```
+
+![image-20200228234215616](./assets/image-20200228234215616.png)
+
+![image-20200228234250686](./assets/image-20200228234250686.png)
+
+`.div1`과 `.div2`의 `width`와 `height`를 똑같이 설정해줬는데, 결과물을 보면 크기가 서로 다르네요. 그 이유는 `width`와 `height`가 테두리(border)와 패딩(padding)을 뺀 내용물(content)의 크기만 나타내기 때문입니다.
+
+따라서 `.div1`의 실제 가로 길이는 테두리까지 포함한 `320px`, 세로 길이는 테두리까지 포함한 `220px`인 거죠. 반면 `.div2`의 실제 가로 길이는 테두리와 패딩까지 포함한 `400px`, 세로 길이는 `300px`입니다.
+
+실제 가로, 세로 크기가 `300px`, `200px`이기 위해서는 테두리와 패딩을 고려해서 계산을 해줘야 한다는 불편함이 있습니다.
+
+# 해결책: box-sizing
+
+다행히 CSS3부터는 `box-sizing` 속성을 사용하면 이 문제를 해결할 수 있습니다. 따로 설정해주지 않으면 `box-sizing`의 기본값은 `content-box`인데, 이걸 `border-box`로 바꿔봅시다.
+
+```css
+.div1 {
+  box-sizing: border-box;
+  border: 10px solid red;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.div2 {
+  box-sizing: border-box;
+  border: 10px solid red;
+  width: 300px;
+  height: 200px;
+  padding: 40px;
+}
+```
+
+`box-sizing` 속성을 `border-box` 값으로 설정해주면 `width`와 `height`는 테두리와 패딩과 내용물을 모두 포함한 길이가 됩니다. 따라서 더 이상 귀찮은 계산을 할 필요가 없는 거죠!
+
+### 더 간편하게!
+
+`box-sizing` 속성을 사용하면 너무 편하다 보니, 요즘 많은 개발자들이 **모든** 요소에 `box-sizing: border-box;`를 써주는 추세입니다. 이걸 간편하게 한 번에 처리하기 위해서는 모든 요소를 나타내는 `*`에 속성을 써주면 되겠죠?
+
+```css
+* {
+  box-sizing: border-box;
+}
+
+.div1 {
+  border: 10px solid red;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.div2 {
+  border: 10px solid red;
+  width: 300px;
+  height: 200px;
+  padding: 40px;
+}
+```
+
