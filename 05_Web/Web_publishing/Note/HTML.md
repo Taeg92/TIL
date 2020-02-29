@@ -174,6 +174,10 @@
 
 /* 새 페이지에서 링크를 열고 싶을 때 */
 <a href = "https://www.google.com/" target = "_blank">
+
+/* 내용에 이미지를 넣으면 이미지를 누르면 링크로 이동한다.*/
+<a href = "가고 싶은 주소"> 내용</a>
+<a href = "가고싶은 주소"><img src = "image주소"></a>
 ```
 
 
@@ -265,4 +269,168 @@ height = "300" weight = '300'>
 | ------ | --------------------------- | ----------------------------------------- |
 | 공통점 | 요소를 묶어준다.            | 요소를 묶어준다.                          |
 | 차이점 | 글을 새로운 줄에 넣어 준다. | 원래 있던 글의 위치에 영향을 주지 않는다. |
+
+
+
+# Display
+
+>HTML 요소의 레이아웃을 결정하는 가장 중요한 속성 중 하나는 `display`입니다.
+
+# display의 종류
+
+모든 요소는 딱 한 개의 display 값을 갖고 있습니다. 가질 수 있는 display의 종류는
+
+1. `inline`
+2. `block`
+3. `inline-block`
+4. `flex`
+5. `list-item`
+6. `none`
+
+등 여러 가지가 있는데, 대부분의 요소들은 `inline`과 `block` 중 한 가지입니다.
+
+### inline display
+
+inline 요소들은 다른 요소들과 같은 줄에 머무르려고 하는 성향과, 필요한 만큼의 가로 길이만 차지하는 성향이 있습니다.
+
+다음 요소들은 기본 `display` 값이 `inline`입니다.
+
+1. `<span>`
+2. `<a>`
+3. `<b>`
+4. `<i>`
+5. `<img>`
+6. `<button>`
+
+#### HTML
+
+```html
+My <i>name</i> is Young!
+```
+
+#### CSS
+
+```css
+i {
+  background-color: green;
+}
+```
+
+![image-20200301000132534](./assets/image-20200301000132534.png)
+
+`<i>` 태그는 기본적으로 inline이기 때문에 앞, 뒤의 텍스트와 같은 줄에 머무르고 있고, 가로 길이는 필요한 만큼만 차지하고 있습니다.
+
+### block display
+
+block 요소들은 다른 요소들과 독단적인 줄에 가려고 하는 성향과, 최대한 많은 가로 길이를 차지하는 성향이 있습니다.
+
+다음 요소들은 기본 `display` 값이 `block`입니다.
+
+1. `<div>`
+2. `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`
+3. `<p>`
+4. `<nav>`
+5. `<ul>`
+6. `<li>`
+
+#### HTML
+
+```html
+My <div>name</div> is Young!
+```
+
+#### CSS
+
+```css
+div {
+  background-color: green;
+}
+```
+
+`<div>` 태그는 기본적으로 block이기 때문에 새로운 줄에 가버립니다. 그리고 가로 길이는 최대한 많이, 100%를 차지하고 있죠?
+
+# display 바꾸기
+
+모든 요소는 기본적으로 정해진 display 값이 있는데요. CSS를 통해서 이를 바꿀 수 있습니다!
+
+### inline 요소를 block으로 바꾸기
+
+#### HTML
+
+```html
+My <i>name</i> is Young!
+```
+
+#### CSS
+
+```css
+i {
+  display: block; /* <i> 태그를 block으로 바꾸기 */
+  background-color: green;
+}
+```
+
+### block 요소를 inline으로 바꾸기
+
+#### HTML
+
+```html
+<div class="div1">Hello World!</div>
+<div class="div2">My name is Young!</div>
+```
+
+#### CSS
+
+```css
+div {
+  display: inline; /* <div> 태그를 inline으로 바꾸기 */
+}
+
+.div1 {
+  background-color: green;
+}
+
+.div2 {
+  background-color: blue;
+}
+```
+
+
+
+# Inline-Block
+
+> Block 요소에게는 가로 길이와 세로 길이를 직접 설정해줄 수 있지만, inline 요소는 자동으로 설정이 됩니다. Inline 요소에게는 가로, 세로 길이의 개념이 딱히 없는 셈이죠.
+
+만약 inline 요소처럼 다른 요소들과 같은 줄에 머무르면서 block 요소처럼 가로, 세로 길이도 설정해주고 싶으면 어떻게 해야 할까요? 바로 그 둘을 섞어놓은 `inline-block`을 사용하면 됩니다!
+
+#### HTML
+
+```html
+My <i>name</i> is Young!
+```
+
+#### CSS
+
+```css
+i {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+```
+
+
+
+### 1. `<img>` 태그
+
+> `<img>`태그는 사실 대체 요소라고 하는 좀 특별한 인라인 요소이다.
+
+
+
+`<img>` 로 호출한 사진이 사실 엄청 큰 글자라 생각할 수 있다.
+
+- text-align , vertical-align 이 다 글자처럼 적용이 된다.
+
+
 
