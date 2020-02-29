@@ -2194,12 +2194,18 @@ html {
 
 # Position
 
-> - Static position : 원래 있어야 할 위치에 있는 것
-> - Relative position : 원래 있어야 할 공간에서 지정한 값만큼 벗어나서 위치하게 된다.
+> - Static position : 원래 있어야 할 위치에 있는 것.
+> - Relative position : 원래 있어야 할 공간을 기준으로 위치를 정해줌.
+> - Fixed position : 브라우저의 가장자리를 기준으로 위치를 지정해줌.
+> - Absolute position : 가장 가까운 포지셔닝이 된 조상(Ancestor) 요소가 기준으로 위치를 정해줌.
 
 
 
-- Relative position
+![image-20200301023822558](./assets/image-20200301023822558.png)
+
+
+
+# Relative Position
 
 ```css
 b {
@@ -2213,3 +2219,27 @@ b {
 }
 ```
 
+
+
+# Fixed Position
+
+> Relative position은 원래 위치를 기준으로 position을 해주지만, Fixed Position은 브라우저를 기준으로 position을 정해준다. 즉, 브라우저의 가장자리를 기준으로 위치를 정해주게 된다.
+>
+> 이때! 화면을 스크롤 해도 브라우저 창을 기준으로 정해진 자리를 이동하지는 않는다.
+
+
+
+- 화면을 스크롤 해도 브라우저 창을 기준으로 정해진 자리에서 벗어나거나 이동하지 않는다.
+- `position: fixed;`를 해주게 되면 `position: relative; `는 원래 자리를 비워두는데 반해 Fixed Position은 다음 요소나 문구가 그 자리를 채우게 된다.
+- navigation bar에 흔히 사용된다.
+
+
+
+# Absolute Position
+
+> 가장 가까운 **포지셔닝이 된 조상(Ancestor) 요소**가 기준으로 위치를 정해주게 된다.
+
+
+
+- 포지셔닝이 된 상위 요소의 block을 기준으로 포지셔닝이 된다.
+- 바로 상위 요소가 포지셔닝이 되지 않았다면, 다음 상위 요소를 탐색한다.
