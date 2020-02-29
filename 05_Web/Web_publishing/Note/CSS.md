@@ -2189,3 +2189,27 @@ html {
 ```
 
 참고: https://webdesign.tutsplus.com/ko/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+
+
+
+# Position
+
+> - Static position : 원래 있어야 할 위치에 있는 것
+> - Relative position : 원래 있어야 할 공간에서 지정한 값만큼 벗어나서 위치하게 된다.
+
+
+
+- Relative position
+
+```css
+b {
+    /* 위로 30px만큼 왼쪽으로 50px만큼 공간을 준만큼 이동함 */
+    position: relative;
+    top: 30px;
+    left: 50px:
+    /* margin-top: 30px, margin-left: 50px이랑 다른점은?*/
+    /* margin은 옮겨간 자리에 원래 있던 내용을 가리지 않고 기존 내용이 밀려나지만 
+    relative position은 덮어쓴다. */
+}
+```
+
