@@ -1,4 +1,4 @@
-# CSS
+CSS
 
 > HTML에 담은 내용을 스타일 해준다.
 
@@ -2243,3 +2243,211 @@ b {
 
 - 포지셔닝이 된 상위 요소의 block을 기준으로 포지셔닝이 된다.
 - 바로 상위 요소가 포지셔닝이 되지 않았다면, 다음 상위 요소를 탐색한다.
+
+
+
+# Float
+
+> 요소를 띄우고 원하는 위치에 배치시킨다.
+>
+> 3차원 공간으로 해석해야 이해하기 쉽다.
+
+
+
+## 1.Single Float
+
+- 요소를 띄우고 원하는 방향으로 이동시키면 띄운 자리가 빈 자리가 되기 때문에 다른 요소가 당겨진다.
+
+- 요소가 겹쳐진다. 하지만 겹쳐진 공간을 inline, inline-block 요소는 갈 수 없다.
+
+  즉, 글은 겹쳐진 부분다음부터 입력이 된다.
+
+- 이러한 layout을 만들기 위해 float가 필요하다.
+
+![image-20200302012726585](./assets/image-20200302012726585.png)
+
+
+
+## 2. Multiple Floats
+
+> 여러가지 요소를 Float하면 어떻게 될까?
+
+
+
+- 만약 같은 위치에 두 요소를 Float하게 되면 먼저 입력받은 요소가 그 자리에 위치하고 그 옆에 다음 요소가 위치하게 된다. 
+
+![image-20200302015754138](./assets/image-20200302015754138.png)
+
+![image-20200302015854740](./assets/image-20200302015854740.png)
+
+
+
+## 3. Grid 레이아웃
+
+> 사이트에 내용을 정리하는 가로, 세로 틀
+
+
+
+![image-20200302020053505](./assets/image-20200302020053505.png)
+
+![image-20200302020122270](./assets/image-20200302020122270.png)
+
+#### HTML
+
+```HTML
+<body>
+    <div id="div1" class="col col-1" style="background: blue;"></div>
+    <div id="div2" class="col col-1" style="background: green;"></div>
+    <div id="div3" class="col col-1" style="background: yellow;"></div>
+    <div id="div4" class="col col-2" style="background: purple;"></div>
+</body>
+```
+
+### CSS
+
+```CSS
+/* body의 width = 620px일때*/
+.col-1 {
+    width: 200px;
+}
+.col-2 {
+    width: 400px;
+}
+
+#div1 {
+    float: left;
+}
+#div2 {
+    float: left;
+}
+#div3 {
+    float: left;
+}
+#div4 {
+    float: left;
+}
+
+```
+
+위 코드를 최적화해서 줄이면
+
+```CSS
+.col-1 {
+    width: 200px;
+}
+.col-2 {
+    width: 400px;
+}
+
+.col {
+    width: 200px;
+    float: left;
+}
+```
+
+![image-20200302021413830](./assets/image-20200302021413830.png)
+
+#### 채워지다가 공간이 다 차게 되면 바로 밑에 줄에 위치한다.
+
+
+
+# Clear
+
+> 원하는 방향에 떠있는 요소 즉, float된 요소가 없도록 해준다.
+
+
+
+#### HTML
+
+```html
+<body>
+    <div id="div1" class="col col-1" style="background-color: blue;"></div>
+    <div id="div2" class="col col-1" style="background-color: green;"></div>
+    <div id="div3" class="col col-1" style="background-color: yellow;"></div>
+    <div id="div4" class="col col-1" style="background-color: orange;"></div>
+    <div id="div5" class="col col-2" style="background-color: purple;"></div>
+</body>
+```
+
+#### CSS
+
+```css
+.col-1 {
+    width: 200px;
+}
+.col-2 {
+    width: 400px;
+}
+
+.col {
+    width: 200px;
+    float: left;
+}
+
+/* clear 추가 */
+.div2 {
+    clear: left;
+}
+```
+
+#### Before
+
+![image-20200302023027989](./assets/image-20200302023027989.png)
+
+#### After
+
+![image-20200302023103642](./assets/image-20200302023103642.png)
+
+
+
+- 모든 요소가 float된 경우 `<p>`태그 또는 inline 텍스트의 위치를 잡아주기 위해 clear를 사용한다. 
+
+#### HTML
+
+```HTML
+<body>
+    <div class="grid">
+        <div id="div1" class="col col-1" style="background-color: blue;"></div>
+    	<div id="div2" class="col col-1" style="background-color: green;"></div>
+    	<div id="div3" class="col col-1" style="background-color: yellow;"></div>
+    	<div id="div4" class="col col-1" style="background-color: orange;"></div>
+    	<div id="div5" class="col col-2" style="background-color: purple;"></div>
+    	<div class="clearfix"></div>
+    </div>
+</body>
+```
+
+#### CSS
+
+```css
+.col-1 {
+    width: 200px;
+}
+.col-2 {
+    width: 400px;
+}
+
+.col {
+    width: 200px;
+    float: left;
+}
+.grid {
+    border: 2px solid black;
+}
+/* clear 추가 */
+.div2 {
+    clear: left;
+}
+/* clearfix class 추가 */
+.clearfix {
+    clear: left;
+}
+```
+
+#### Before
+
+![image-20200302024341713](./assets/image-20200302024341713.png)
+
+#### After
+
+![image-20200302024436216](./assets/image-20200302024436216.png)
