@@ -849,3 +849,147 @@ chris의 top값과 alex의 top 값을 맞춰야 하는데, alex를 내려서 chr
 
 
 
+# `<ol>`태그
+
+> Ordered List(`<ol>`): 순서가 있는 list이다.
+
+
+
+#### HTML
+
+```html
+<body>
+    <ol>
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ol>
+</body>
+```
+
+```
+1. 집 청소
+2. 영어 단어 외우기
+3. 영화 보기
+```
+
+
+
+#### HTML
+
+```HTML
+<!-- 순서를 매기는 다른 방법1 -->
+<body>
+    <ol type="a">
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ol>
+</body>
+```
+
+```
+a. 집 청소
+b. 영어 단어 외우기
+c. 영화 보기
+```
+
+
+
+#### HTML
+
+```HTML
+<!-- 순서를 매기는 다른 방법2 -->
+<body>
+    <ol type="A">
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ol>
+</body>
+```
+
+```
+A. 집 청소
+B. 영어 단어 외우기
+C. 영화 보기
+```
+
+
+
+#### HTML
+
+```HTML
+<!-- 순서를 매기는 다른 방법3 -->
+<body>
+    <ol type="i">
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ol>
+</body>
+```
+
+```
+i. 집 청소
+ii. 영어 단어 외우기
+iii. 영화 보기
+```
+
+
+
+#### HTML
+
+```HTML
+<!-- 순서를 매기는 다른 방법4 -->
+<body>
+    <ol type="I">
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ol>
+</body>
+```
+
+```
+I. 집 청소
+II. 영어 단어 외우기
+III. 영화 보기
+```
+
+
+
+
+
+# `<ul>`
+
+> Unordered List(`<ul>`): 순서가 없는 list이다.
+
+
+
+#### HTML
+
+```html
+<body>
+    <ul>
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ul>
+</body>
+```
+
+
+
+#### 출력
+
+- 집 청소
+- 영어 단어 외우기
+- 영화 보기
+
