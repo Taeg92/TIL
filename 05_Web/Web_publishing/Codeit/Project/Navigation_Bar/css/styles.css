@@ -13,9 +13,33 @@ body {
 
 #logo {
   float: left;
+  line-height: 60px;
+}
+#logo img{
+  vertical-align: middle;
+}
+.menu {
+  line-height: 60px;
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
 
-  /* 이건 지우세요 */
-  background-color: orange;
+.menu li {
+  float: left;
+}
+.menu li a{
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  background-color: #eeeeee;
 }
 
 .hero-header {
@@ -25,11 +49,13 @@ body {
   height: 670px;
   text-align: center;
   font-family: 'Noto Sans KR', sans-serif;
+  line-height: 670px;
 }
 
 .hero-header .info {
-  /* 이건 지우세요 */
-  background-color: orange;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .hero-header .info h1 {
@@ -56,5 +82,3 @@ body {
   text-decoration: none;
   border-radius: 5px;
 }
-
-
