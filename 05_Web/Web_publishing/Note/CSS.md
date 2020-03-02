@@ -2451,3 +2451,62 @@ b {
 #### After
 
 ![image-20200302024436216](./assets/image-20200302024436216.png)
+
+
+
+
+
+# List Styling
+
+> List를 스타일링 해보자!
+
+#### HTML
+
+```html
+<body>
+    <ul>
+        <!-- <li></li>는 list item 이다. -->
+        <li>집 청소</li>
+        <li>영어 단어 외우기</li>
+        <li>영화 보기</li>
+    </ul>
+</body>
+```
+
+#### CSS
+
+```CSS
+/* 기본적으로 주어진 ul padding값 없애기 */
+ul {
+    padding-left: 0;
+}
+
+/* ul list모양 네모로 변경 */
+li {
+    list-style-type: square;
+}
+/* ul list모양 삭제 */
+li {
+    list-style-type: none;
+}
+```
+
+
+
+### 여러가지 요소 설정하기
+
+```css
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    background-color: #77abff;
+    color: white;
+    padding: 10px 20px
+}
+```
+
+![image-20200303004438630](./assets/image-20200303004438630.png)
