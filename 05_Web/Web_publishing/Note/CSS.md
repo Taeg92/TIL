@@ -2510,3 +2510,38 @@ li {
 ```
 
 ![image-20200303004438630](./assets/image-20200303004438630.png)
+
+
+
+
+
+# Responsive Web Design
+
+> 브라우저 크기에 따라 맞춰 layout이 바뀌는 Design
+
+
+
+- 반응형 웹(Responsive Web Design)을 하게 되면 따로 모바일 버전이나 태블릿 버전의 웹 사이트를 만들 필요가 없다.
+
+```css
+/* 브라우저의 width가 768px 이상일때, 992px 이상일 때 아래의 폰트 스타일들을 입력하는 코드 */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 48px;
+    }
+    p {
+        font-size: 32px
+    }
+}
+```
+
