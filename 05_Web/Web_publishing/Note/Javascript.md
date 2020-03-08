@@ -58,3 +58,79 @@ jQuery를 설치하는 방법으로는 크게 두 가지가 있습니다.
   // 우리 자바스크립트 코드...
 </script>
 ```
+
+
+
+# Event
+
+> Event(이벤트)란 HTML 요소들에게 일어날 수 있는 일들이다.
+
+
+
+- 사용자가 요소를 클릭한다.
+- 마우스가 요소 위로 올라온다.
+- 마우스가 요소 밖으로 나간다.
+- 페이지 로딩이 끝난다.
+- 사용자가 키보드를 누른다.
+
+
+
+이와 같은 html 요소들에게 일어날 수 있는 모든 일들을 이벤트라 한다.
+
+이와 같은 이벤트 들이 생겼을 때 어떤 동작이 일어나도록 코드를 쓸 수 있다.
+
+이런 어떠한 동작이 일어나도록 하는 일들을 이벤트 핸들링(Event Handling)이라 한다.
+
+
+
+예를 들어
+
+- 키보드에서 'q'를 누르면 게임이 끝난다
+
+이때 키보드에서 q를 누르는게 이벤트이고 게임이 끝나는게 이벤트 핸들링이다.
+
+
+
+![image-20200308205306894](./assets/image-20200308205306894.png)
+
+
+
+이때 만약 이벤트 핸들링을 함수로 처리해주면 이 때의 함수를 이벤트 핸들러라고 한다.
+
+
+
+# 이벤트 등록하는 jQuery 코드
+
+
+
+```js
+$('#home').on('click', clickHome);
+$('#seoul').on('click', clickSeoul);
+$('#tokyo').on('click', clickTokyo);
+$('#paris').on('click', clickParis);
+```
+
+
+
+이렇게 이벤트를 등록하면, HTML 태그에 직접 명시해두지 않고 더 깔끔하게 쓸 수 있습니다.
+
+
+
+# 순수 자바스크립트 (Vanilla JavaScript)
+
+
+
+jQuery 너무 편하고 좋습니다. 그래도 혹시 나중에 jQuery를 쓰지 않을 경우를 대비해서, '순수 자바스크립트'만을 사용했을 때에는 어떻게 써야할지 알아두는 것도 나쁘지 않겠죠?
+
+
+
+```js
+document.getElementById('home').addEventListener('click', clickHome);
+document.getElementById('seoul').addEventListener('click', clickSeoul);
+document.getElementById('tokyo').addEventListener('click', clickTokyo);
+document.getElementById('paris').addEventListener('click', clickParis);
+```
+
+
+
+순수 자바스크립트만 쓰니까 조금 복잡해졌습니다. 하지만 위에 있는 jQuery 코드와 의미는 동일합니다.
