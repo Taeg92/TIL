@@ -8,10 +8,10 @@
   <div class="main">
     <img class="logo" src = "images/logo.png">
     <div class="menu">
-      <a id="home" onclick="clickMenu('home')">Home</a>
-      <a id="seoul" onclick="clickMenu('seoul')">Seoul</a>
-      <a id="tokyo" onclick="clickMenu('tokyo')">Tokyo</a>
-      <a id="paris" onclick="clickMenu('paris')">Paris</a>
+      <a id="home">Home</a>
+      <a id="seoul">Seoul</a>
+      <a id="tokyo">Tokyo</a>
+      <a id="paris">Paris</a>
     </div>
     <img id="photo" src = "images/home.png" width="90%">
     
@@ -22,6 +22,23 @@
     crossorigin="anonymous"></script>
     
     <script>
+      $('#home').on('click', function() {
+        clickMenu('home');
+      });
+      $('#seoul').on('click', function() {
+        clickMenu('seoul');
+      });
+      $('#tokyo').on('click', function() {
+        clickMenu('tokyo');
+      });
+      $('#paris').on('click', function() {
+        clickMenu('paris');
+      });
+
+      $('#photo').on('mouseenter', mouseEnterPhoto);
+      $('#photo').on('mouseleave', mouseLeavePhoto);
+
+      $(document).on('keydown', processKeyEvent)
       // 사진을 바꿔주는 함수
       function clickMenu(location) {
         var loc = 'images/' + location + '.png'
@@ -36,6 +53,25 @@
             customId = '#' + place[i]
             $(customId).css('font-weight', 'bold')
           }
+        }
+      }
+      // 사진에 그림자를 입히는 함수
+      function mouseEnterPhoto() {
+        $('#photo').css('box-shadow', '5px 10px');
+      }
+      function mouseLeavePhoto() {
+        $('#photo').css('box-shadow', 'none');
+      }
+      // 키보드 이벤트 핸들링
+      function processKeyEvent(event) {
+        if (event['key'] === '1') {
+          clickMenu('home');
+        } else if (event['key'] === '2') {
+          clickMenu('seoul')
+        } else if (event['key'] === '3') {
+          clickMenu('tokyo')
+        } else if (event['key'] === '4') {
+          clickMenu('paris')
         }
       }
     </script>
