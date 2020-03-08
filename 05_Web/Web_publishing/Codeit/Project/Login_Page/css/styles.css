@@ -30,7 +30,7 @@ body {
   padding: 10px;
 }
 
-.submit-btn {
+#submit-btn {
   border-radius: 5px;
   padding: 10px;
   font-size: 14px;
@@ -41,7 +41,7 @@ body {
   border: none;
 }
 
-.submit-btn:hover {
+#submit-btn:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
 }
 
