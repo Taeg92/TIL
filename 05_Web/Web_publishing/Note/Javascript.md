@@ -134,3 +134,22 @@ document.getElementById('paris').addEventListener('click', clickParis);
 
 
 순수 자바스크립트만 쓰니까 조금 복잡해졌습니다. 하지만 위에 있는 jQuery 코드와 의미는 동일합니다.
+
+
+
+# 자바스크립트 개발에 도움이 되는 사이트 
+
+ 
+
+### JSFiddle 영상에서도 보여드린 [JSFiddle](https://jsfiddle.net/)입니다. 
+
+한 페이지 내에서 HTML, CSS, JavaScript를 모두 작성하고 바로 결과를 보여주는 사이트입니다. 
+
+ ### W3Schools 
+
+[W3Schools](https://www.w3schools.com/)는 HTML, CSS, JavaScript뿐 아니라 jQuery, PHP, AngularJS, Bootstrap등 다양한 웹 기술들에 대한 설명과 예제가 나와있는 사이트입니다. 
+
+### MDN JavaScript Document 
+
+[Mozilla Developer Network(MDN)](https://developer.mozilla.org/bm/docs/Web/JavaScript)에서 JavaScript에 대한 문서를 제공해줍니다. 튜토리얼부터 스타일 가이드, 각 기능들에 대한 설명 등이 정리되어 있습니다.
+
