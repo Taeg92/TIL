@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Travel Website</title>
   <link href = "./styles.css" rel = "stylesheet">
 </head>
 <body>
   <div class="main">
     <img class="logo" src = "images/logo.png">
     <div class="menu">
-      <a href = "index.html"><b>Home</b></a>
-      <a href = "seoul.html">Seoul</a>
-      <a href = "tokyo.html">Tokyo</a>
-      <a href = "paris.html">Paris</a>
+      <a id="home" onclick="clickMenu('home')">Home</a>
+      <a id="seoul" onclick="clickMenu('seoul')">Seoul</a>
+      <a id="tokyo" onclick="clickMenu('tokyo')">Tokyo</a>
+      <a id="paris" onclick="clickMenu('paris')">Paris</a>
     </div>
-    <img class="image" src = "images/home.png">
+    <img id="photo" src = "images/home.png" width="90%">
+    
+    <!-- jQuery 쓸 준비 -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    
+    <script>
+      // 사진을 바꿔주는 함수
+      function clickMenu(location) {
+        var loc = 'images/' + location + '.png'
+        var place = ['home', 'seoul', 'tokyo', 'paris']
+        var customId = ''
+        $('#photo').attr('src', loc);
+        for (var i = 0; i < place.length; i++) {
+          if (place[i] != location) {
+            customId = '#' + place[i]
+            $(customId).css('font-weight', 'normal')
+          } else {
+            customId = '#' + place[i]
+            $(customId).css('font-weight', 'bold')
+          }
+        }
+      }
+    </script>
   </div>
 </body>
 </html>
