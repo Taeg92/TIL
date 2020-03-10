@@ -873,3 +873,205 @@ console.log(date.getTime()/1000/60/60 + '시간');
 
 
 `getMonth()`의 경우, `0`부터 시작하기 때문에, `2`는 3월을 의미합니다. 또 `getDay()`는 날짜가 아니라 요일을 리턴해주고, 일요일인 `0`부터 시작해서, `3`은 수요일을 뜻합니다.
+
+
+
+
+
+# Audio
+
+상황에 따라 소리가 필요할 때도 있겠죠? `Audio` 객체를 사용하면 소리를 재생할 수 있습니다.
+
+
+
+### 소리 재생하고 정지하기
+
+
+
+```js
+var audioFile = new Audio("file location or url"); // 생성
+audioFile.play(); // 재생
+audioFile.pause(); // 정지
+```
+
+
+
+우리가 소리를 사용할 때, 소리의 상태는 크게 '생성', '재생', '정지', 총 3가지 단계로 나눌 수 있습니다. 이 코드를 적절히 활용하면 사이트에 소리를 입힐 수 있습니다.
+
+
+
+- HTML
+- CSS
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Player</title>
+  <meta charset="utf-8" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<button id="playBtn">Music Start</button>
+<button id="stopBtn">STOP</button>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script> 
+var audioFile = new Audio("https://d34x6xks9kc6p2.cloudfront.net/540997b0-a35f-4b69-86d6-b1c925c4a264/540997b0-a35f-4b69-86d6-b1c925c4a264.mp3");
+
+function playMusic() {
+    audioFile.play();
+}
+
+function stopMusic() {
+    audioFile.pause();
+}
+
+$('#playBtn').on('click', playMusic);
+$('#stopBtn').on('click', stopMusic);
+</script> 
+
+</body>
+</html>
+```
+
+결과 확인
+
+
+
+### 처음부터 재생하기
+
+
+
+위의 코드에서 여러 번 '재생'과 '정지'를 눌러보시면, 처음부터 다시 재생되는게 아니라 멈춘 다음부터 재생이 됩니다. 경우에 따라서는 재생을 누를 떄마다 처음부터 재생하고 싶을 수도 있겠죠? 이럴 때 `currentTime`이라는 속성을 활용하면 됩니다.
+
+
+
+```
+audioFile.currentTime = 0; // 오디오 파일 재생 위치 설정
+```
+
+
+
+이렇게 작성하면 오디오 파일이 재생될 곳을 선택할 수 있습니다.
+
+
+
+- HTML
+- CSS
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Player</title>
+  <meta charset="utf-8" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<button id="playBtn">Music Start</button>
+<button id="stopBtn">STOP</button>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script> 
+var audioFile = new Audio("https://d34x6xks9kc6p2.cloudfront.net/540997b0-a35f-4b69-86d6-b1c925c4a264/540997b0-a35f-4b69-86d6-b1c925c4a264.mp3");
+
+function playMusic() {
+    audioFile.play();
+}
+
+function stopMusic() {
+    audioFile.pause();
+    audioFile.currentTime = 0; // '멈춤' 버튼을 누른 후에는 오디오의 시작 지점을 처음으로 다시 돌려주기.
+}
+
+$('#playBtn').on('click', playMusic);
+$('#stopBtn').on('click', stopMusic);
+</script> 
+
+</body>
+</html>
+```
+
+결과 확인
+
+
+
+두 결과물의 차이가 느껴지시나요?
+
+
+
+# 코딩은 피라미드다?
+
+
+
+![img](https://i.imgur.com/zF9XLiN.jpg) 이집트의 **피라미드**입니다. 당시에 저렇게 큰 건축물을 지으려면 수많은 사람들의 힘이 필요했을 것입니다. 그리스 역사가 '헤로도스트'는 큰 피라미드의 경우 건설에 10만 명이 참여했다고 말했는데요. 놀랍게도 피라미드는 마치 한 사람이 만든 것 처럼 규칙적인 모습, 규칙적인 구조를 가지고 있습니다. 그렇기에 위대한 건축물로 평가받고 있는 것이죠.
+
+
+
+**소프트웨어(프로그램)**도 많은 사람들이 함께 만드는 하나의 거대 구조물입니다. 따라서 프로그램이 안정적으로, 그리고 아름답게 세워지기 위해서는 모두가 따르는 일종의 '룰'이 필요한 거죠.
+
+
+
+저마다의 스타일과 방식으로 코드를 작성한다면 개발자 간의 충돌이 발생하고 지저분한 코드가 만들어지겠죠?
+
+
+
+# 스타일 가이드
+
+
+
+여러 사람이 함께 아름다운 프로그램을 만들 수 있도록 도와주는 룰이 바로 '스타일 가이드'입니다. 다른 코드잇 수업을 들어보셨으면 익숙한 개념이죠?
+
+
+
+스타일 가이드는 문법적인 것 이외에 '어떤 방식과 스타일로 코딩을 하는 게 좋을지' 정해주는 역할을 하는데요. 아래와 같은 내용들을 포함하고 있습니다:
+
+
+
+1. 띄어쓰기와 줄바꿈
+2. 변수 이름을 짓는 규칙
+3. 동작은 하지만 쓰지 말아야 할 코드
+4. 그 외 등등..
+
+
+
+스타일이 잘 갖추어진 코드는 가독성이 높고, 유지 보수 및 재사용성이 높아지며, 버그를 줄일 수 있는 안정적인 코드가 됩니다.
+
+
+
+# 다양한 JavaScript 스타일 가이드
+
+
+
+스타일 가이드는 전 세계에 딱 하나로 통일되는 법이 아닙니다. 다양한 단체들이 제각각 선호하는 스타일들을 모아둔 가이드라인일 뿐입니다. 구글에 개발자로 가면 '구글 JavaScript 스타일 가이드'를 따라야 하고, 페이스북에 가서 일을 하면 '페이스북 JavaScript 스타일 가이드'를 따라야 하는 거죠.
+
+
+
+[에어비엔비 JavaScript 스타일 가이드](https://github.com/tipjs/javascript-style-guide)
+
+
+
+[깃허브에 공유되어 있는 인기 있는 JavaScript 스타일 가이드](https://github.com/rwaldron/idiomatic.js/tree/master/translations/ko_KR)
+
+
+
+[구글 JavaScript 스타일 가이드](https://google.github.io/styleguide/jsguide.html)
+
+
+
+# 스타일 가이드는 누가 만드나요?
+
+
+
+스타일 가이드는 누군가 혼자 작성하는 것이 아니라, 여러 사람들이 의견을 나누고 시행착오를 겪으며 만들어지는 것입니다. 자바스크립트는 어느 정도 코딩 스타일이 굳어지고 있지만, 위의 세 링크에서도 차이점이 존재합니다. 스타일 가이드가 절대적인 것은 아니란 걸 알 수 있죠.
