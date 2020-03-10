@@ -1011,6 +1011,8 @@ $('#stopBtn').on('click', stopMusic);
 
 
 
+# 스타일 가이드
+
 # 코딩은 피라미드다?
 
 
@@ -1075,3 +1077,314 @@ $('#stopBtn').on('click', stopMusic);
 
 
 스타일 가이드는 누군가 혼자 작성하는 것이 아니라, 여러 사람들이 의견을 나누고 시행착오를 겪으며 만들어지는 것입니다. 자바스크립트는 어느 정도 코딩 스타일이 굳어지고 있지만, 위의 세 링크에서도 차이점이 존재합니다. 스타일 가이드가 절대적인 것은 아니란 걸 알 수 있죠.
+
+
+
+# 작명 센스
+
+혹자는 말합니다. 나는 코딩 시간의 50%를 이름 짓는데 쓰노라고.
+
+
+
+그만큼 작명은 프로그래밍에 굉장히 중요한데요. 너무 대충 지어도 안 되고 너무 독창적이어도 안 됩니다!
+
+
+
+# 좋은 이름이란?
+
+
+
+그럼 '좋은 이름'이란 무엇일까요?
+
+
+
+### 1. 보기에 좋아야 한다.
+
+
+
+변수명이 너무 길어지면, 그 부근의 코드 전체가 읽기 어려워질 수 있습니다.
+
+
+
+```js
+if (isTestCompletedYetAnotherRequestRecievedFromRemoteServer && receivedValueFromUser === '2' ) {
+  // ...
+}
+```
+
+
+
+이렇게 길면 머리가 아파오겠죠?
+
+
+
+### 2. 이해하기 쉬워야 한다.
+
+
+
+*만약 내가 이 코드를 2년 후에 다시 본다면?*
+
+
+
+2년이 지난 후에도 변수나 함수의 이름만 보고서 무엇을 의도했는지 알 수 있어야 합니다.
+
+
+
+*내가 쓴 코드를 지구 반대편의 누군가가 본다면?*
+
+
+
+마찬가지로 이름만 가지고 그들이 나의 의도를 파악해야 좋은 이름이라고 할 수 있습니다.
+
+
+
+예시로, 불린 타입을 저장할 변수로는 `isXxxxx`와 같은 이름이 좋습니다. `isConnected`라는 변수가 있다면, 누가 봐도 여기에 `true` 혹은 `false` 값이 들어있고, 어떠한 연결 여부를 알려주는 것이라고 추측할 수 있겠죠?
+
+
+
+### 3. 실수를 유발하지 않아야 한다.
+
+
+
+이름이 모호하거나 혼동의 여지가 있으면 좋지 않습니다. 이름 때문에 헷갈려서 발생하는 문제들이 생각보다 많습니다.
+
+
+
+한 가지 예를 들자면, "...하지 않는 것"이라는 부정적 의미의 변수 이름은 좋지 않습니다.
+
+
+
+```js
+if (isNotZero !== false) {
+    // ...
+}
+```
+
+
+
+"0이 아님"이 거짓이 아니다? 뭔가 굉장히 헷갈리죠?
+
+
+
+`isNotZero` 대신, `isZero`와 같은 이름을 쓰면 실수를 방지할 수 있습니다.
+
+
+
+# Boolean 활용
+
+
+
+# 용어 설명
+
+
+
+#### undefined 와 null
+
+
+
+`undefined`와 `null`은 자주 접하게 되는 값들입니다.
+
+
+
+`null`은 비어있는 값이고, `undefined`는 변수에 아무것도 할당되지 않았을 때의 값입니다. 자바스크립트에서는 변수의 선언과 초기화를 동시에 하지 않아도 되기 때문에, 선언만 된 변수는 `undefined`라는 값을 갖게 됩니다.
+
+
+
+```js
+var n = null;
+var u;
+
+console.log(n);
+console.log(u);
+```
+
+
+
+```
+null
+undefined
+```
+
+
+
+#### NaN (Not a Number)
+
+
+
+전에도 잠깐 언급했던 적 있었죠? `NaN`은 'Not a Number'의 약자입니다. 숫자가 아닌 것을 숫자로 표현하려 할 때 반환됩니다.
+
+
+
+```js
+var n = parseInt('abcd');
+console.log(n);
+```
+
+
+
+```
+NaN
+```
+
+
+
+# false와 true로 간주되는 것들
+
+
+
+자바스크립트 if문이나 while문의 조건 부분에는 사실 불린이 아닌 다른 자료형의 결과값이 있어도 작동합니다.
+
+
+
+그래도 조건을 통과하는지 안 하는지에 대한 기준은 필요하겠죠? 어떤 것들이 `true`로 간주되고, 어떤 것들이 `false`로 간주될까요?
+
+
+
+#### 숫자
+
+
+
+```js
+if (0) {
+  console.log('0은 true');
+} else {
+  console.log('0은 false');
+}
+
+if (4) {
+  console.log('양수는 true');
+} else {
+  console.log('양수는 false');
+}
+
+if (-10) {
+  console.log('음수는 true');
+} else {
+  console.log('음수는 false');
+}
+```
+
+
+
+```
+0은 false
+양수는 true
+음수는 true
+```
+
+
+
+#### 문자열
+
+
+
+```js
+if ('') {
+  console.log('비어있는 문자열은 true');
+} else {
+  console.log('비어있는 문자열은 false');
+}
+
+if ('ab') {
+  console.log('안 비어있는 문자열은 true');
+} else {
+  console.log('안 비어있는 문자열은 false');
+}
+```
+
+
+
+```
+비어있는 문자열은 false
+안 비어있는 문자열은 true
+```
+
+
+
+#### null, undefined, NaN
+
+
+
+```js
+if (null) {
+    console.log('null은 true');
+} else {
+    console.log('null은 false');
+}
+
+if (undefined) {
+    console.log('undefined는 true');
+} else {
+    console.log('undefined는 false');
+}
+
+if (NaN) {
+    console.log('NaN은 true');
+} else {
+    console.log('NaN은 false');
+}
+```
+
+
+
+```
+null은 false
+undefined는 false
+NaN은 false
+```
+
+
+
+# 위의 것을 활용하는 방법
+
+
+
+기존의 지식을 활용해서, 변수 `str`이 빈 문자열인지 이렇게 확인할 수 있습니다.
+
+
+
+```js
+if (str !== '') {
+  console.log('str은 빈 문자열이 아닙니다.');
+} else {
+  console.log('str은 빈 문자열입니다.');
+}
+```
+
+
+
+하지만 새롭게 배운 지식을 활용하면 이렇게 바꿀 수 있습니다.
+
+
+
+```js
+if (str) {
+  console.log('str은 빈 문자열이 아닙니다.');
+} else {
+  console.log('str은 빈 문자열입니다.');
+}
+```
+
+
+
+# 다른 자료형을 불린으로 변형하는 법
+
+
+
+비어 있는 문자열은 불린으로 생각했을 때 `false`이죠? 따라서 아래 코드에서 `!str`을 하면 `true`가 되고, `!!str`을 하면 `false`가 됩니다.
+
+
+
+```js
+var str = '';
+console.log(!str);
+console.log(!!str);
+```
+
+
+
+```
+true
+false
+```
+
