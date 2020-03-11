@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>Travel Website</title>
-  <link href = "./styles.css" rel = "stylesheet">
+  <link href = "./css/styles.css" rel = "stylesheet">
 </head>
 <body>
   <div class="main">
     <img class="logo" src = "images/logo.png">
-    <div class="menu">
+    <div id="menu">
       <a id="home">Home</a>
       <a id="seoul">Seoul</a>
       <a id="tokyo">Tokyo</a>
@@ -19,62 +19,8 @@
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    
-    <script>
-      $('#home').on('click', function() {
-        clickMenu('home');
-      });
-      $('#seoul').on('click', function() {
-        clickMenu('seoul');
-      });
-      $('#tokyo').on('click', function() {
-        clickMenu('tokyo');
-      });
-      $('#paris').on('click', function() {
-        clickMenu('paris');
-      });
-
-      $('#photo').on('mouseenter', mouseEnterPhoto);
-      $('#photo').on('mouseleave', mouseLeavePhoto);
-
-      $(document).on('keydown', processKeyEvent)
-      // 사진을 바꿔주는 함수
-      function clickMenu(location) {
-        var loc = 'images/' + location + '.png'
-        var place = ['home', 'seoul', 'tokyo', 'paris']
-        var customId = ''
-        $('#photo').attr('src', loc);
-        for (var i = 0; i < place.length; i++) {
-          if (place[i] != location) {
-            customId = '#' + place[i]
-            $(customId).css('font-weight', 'normal')
-          } else {
-            customId = '#' + place[i]
-            $(customId).css('font-weight', 'bold')
-          }
-        }
-      }
-      // 사진에 그림자를 입히는 함수
-      function mouseEnterPhoto() {
-        $('#photo').css('box-shadow', '5px 10px');
-      }
-      function mouseLeavePhoto() {
-        $('#photo').css('box-shadow', 'none');
-      }
-      // 키보드 이벤트 핸들링
-      function processKeyEvent(event) {
-        if (event['key'] === '1') {
-          clickMenu('home');
-        } else if (event['key'] === '2') {
-          clickMenu('seoul')
-        } else if (event['key'] === '3') {
-          clickMenu('tokyo')
-        } else if (event['key'] === '4') {
-          clickMenu('paris')
-        }
-      }
-    </script>
+    crossorigin="anonymous"></script>    
+    <script src="./js/script.js"></script>
   </div>
 </body>
 </html>
