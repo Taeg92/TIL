@@ -1247,6 +1247,24 @@ $('go-to-top').on('click', function() {
 
 
 
+### 한 화면 scroll 최 하단 위치 구하는 방법
+
+![image-20200311232841885](./assets/image-20200311232841885.png)
+
+
+
+### 한 화면 각 리스트의 중단 위치 구하는 방법
+
+![image-20200311234612914](/assets/image-20200311234612914.png)
+
+```js
+var playlistHalf = playlist.position().top + playlist.outerHeight()/2;
+```
+
+
+
+
+
 # Each
 
 
