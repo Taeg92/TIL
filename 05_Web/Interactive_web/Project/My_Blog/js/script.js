@@ -1,4 +1,6 @@
 function scrollHandler() {
+    var windowBottom = $(window).scrollTop() + $(window).height();
+    var documentBottom = $(document).height();
     if ($(window).scrollTop() >= $('.about').position().top) {
         $('.menu-right button').css('color', '#4A4A4A');
         $('.skill').each(function() {
@@ -8,6 +10,7 @@ function scrollHandler() {
         })
     } else {
         $('.menu-right button').css('color', 'white');
+        
     }
 
     $('section').each(function() {
@@ -15,6 +18,11 @@ function scrollHandler() {
             $(this).find('.vertical-center').animate({top: '0', opacity: '1'}, 800);
         }
     });
+    if (windowBottom == documentBottom) {
+        $('.to-top-btn').fadeIn(500);
+    } else {
+        $('.to-top-btn').fadeOut(500);
+    }
 }
 
 $(window).on('scroll', scrollHandler);
@@ -29,4 +37,8 @@ $('.menu-right button').on('click', function() {
     } else if (targetId == 'contact-btn') {
         $('html, body').animate({scrollTop: $('.contact').position().top}, 1000);
     }
+})
+
+$('.to-top-btn').on('click', function() {
+    $('html, body').animate({scrollTop: 0}, 1000);
 })
