@@ -8,41 +8,68 @@
 
 ​          
 
-##  00_Markdown
+##  00. Markdown
 
 ​               
 
-- How to use Markdown Tool
+- [x] **How to use Markdown Tool**
 
 ​                           
 
-## 01_Git
+## 01. Git
 
 ​               
 
-- How to use Git
+- [x] **How to use Git**
 
 ​                    
 
-## 02_Jupyter-Notebook
+## 02. Jupyter-Notebook
 
 ​                 
 
-- Python Notebook
+- [x] **Python Notebook**
 
-​                
+****                
 
-## 03_Language
+## **03. Language**
 
-​                 
+****                 
 
-- Python
+- [x] **Python**
+- [x] **Javascript**
 
-​            
+****            
 
-## 04_Algorithm
+## **04. Algorithm**
 
-​            
+****            
 
-- List
+- [x] **Algorithm**
+- [x] **Data Structure**
 
+
+
+## **05. Web**
+
+
+
+- [ ] **Web Publishing**
+- [x] **Interactive Web**
+
+  
+
+## 06. Deploy
+
+
+
+- [x] **Heroku**
+- [x] **Netlify**
+
+****  
+
+## **07. Front_End**
+
+****  
+
+- [x] **Vue**
