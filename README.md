@@ -30,20 +30,21 @@
 
 - [x] **Python Notebook**
 
-****                
+
+
 
 ## **03. Language**
 
-****                 
+
 
 - [x] **Python**
 - [x] **Javascript**
 
-****            
+
 
 ## **04. Algorithm**
 
-****            
+
 
 - [x] **Algorithm**
 - [x] **Data Structure**
@@ -54,7 +55,7 @@
 
 
 
-- [ ] **Web Publishing**
+- [x] **Web Publishing**
 - [x] **Interactive Web**
 
   
@@ -65,11 +66,14 @@
 
 - [x] **Heroku**
 - [x] **Netlify**
+- [x] **AWS**
 
-****  
+
+
+   
 
 ## **07. Front_End**
 
-****  
+
 
 - [x] **Vue**
