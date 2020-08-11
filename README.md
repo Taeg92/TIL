@@ -68,14 +68,32 @@
 - [x] **Heroku**
 - [x] **Netlify**
 - [x] **AWS**
-
-
-
+ 
+  
    
-
+    
+     
 ## **07. Front_End**
 
 
 
 - [x] **Vue**
 - [x] **React**
+  
+   
+   
+   
+   
+## **08. Back_End**
+
+
+
+- [x] **Django**
+  
+  
+  
+  
+
+## **09. Computer Science**
+  
+  
