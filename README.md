@@ -68,11 +68,11 @@
 - [x] **Heroku**
 - [x] **Netlify**
 - [x] **AWS**
- 
+
   
-   
+  
     
-     
+  
 ## **07. Front_End**
 
 
@@ -81,9 +81,9 @@
 - [x] **React**
   
    
+  
    
-   
-   
+  
 ## **08. Back_End**
 
 
@@ -95,5 +95,23 @@
   
 
 ## **09. Computer Science**
-  
-  
+
+​      
+
+   
+
+## 10. DevOps
+
+   
+
+- [x] **Docker**
+
+   
+
+   
+
+## 11. DB
+
+   
+
+- [x] **MYSQL**
