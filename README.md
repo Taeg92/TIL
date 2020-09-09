@@ -30,7 +30,7 @@
 
 - [x] **Python Notebook**
 
-
+​      
 
 
 ## **03. Language**
@@ -41,7 +41,7 @@
 - [x] **Javascript**
 - [x] **Java**
 
-
+​      
 
 ## **04. Algorithm**
 
@@ -50,7 +50,7 @@
 - [x] **Algorithm**
 - [x] **Data Structure**
 
-
+​      
 
 ## **05. Web**
 
@@ -59,7 +59,7 @@
 - [x] **Web Publishing**
 - [x] **Interactive Web**
 
-  
+  ​      
 
 ## 06. Deploy
 
@@ -70,7 +70,7 @@
 - [x] **AWS**
 
   
-  
+ ​       
     
   
 ## **07. Front_End**
@@ -80,8 +80,7 @@
 - [x] **Vue**
 - [x] **React**
   
-   
-  
+ ​       
    
   
 ## **08. Back_End**
@@ -90,8 +89,7 @@
 
 - [x] **Django**
   
-  
-  
+​         
   
 
 ## **09. Computer Science**
@@ -107,8 +105,7 @@
 - [x] **Docker**
 
    
-
-   
+ ​        
 
 ## 11. DB
 
